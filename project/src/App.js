@@ -22,7 +22,7 @@ export default function App() {
               <Route path="/students" element={<StudentsTable />} />
               <Route path="/student-council" element={<CouncilTable />} />
               <Route path="/teachers" element={<TeachersTable />} />
-              <Route path="/events-list" element={<EventsListTable />} /> 
+              <Route path="/events-list" element={<EventsListTable />} />
               <Route path="/events-log" element={<EventsLogTable />} />
               <Route path="/report" element={<ReportTable />} />
           </Routes>
