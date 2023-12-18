@@ -22,3 +22,7 @@ class EventList(db.Model):
             "EL_STUDENT_ID": self.EL_STUDENT_ID,
             "EL_STAFF_ID": self.EL_STAFF_ID
         }
+    
+    @classmethod
+    def get_all(cls):
+        return cls.query.all()

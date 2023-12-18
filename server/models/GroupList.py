@@ -16,3 +16,7 @@ class GroupList(db.Model):
             "GL_NUMBER": self.GL_NUMBER,
             "GL_YEAR": self.GL_YEAR
         }
+    
+    @classmethod
+    def get_all(cls):
+        return cls.query.all()

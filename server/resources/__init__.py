@@ -1,8 +1,14 @@
 from flask_restful import Api
+from .EventList import EventList
+from .EventType import EventType
+from .Groupes import Groupes
+from .Report import Report
+from .StaffList import StaffList
+from .Student import Student
+from .StudentBoard import StudentBoard
 
-# from .resource import ResourceClass
 
-api = Api()
+api = Api(prefix="/api")
 
-# for resource in [ResourceClass, ...]:
-#     api.add_resource(resource, resource.path)
+for resource in [EventList, EventType, Groupes, Report, StaffList, Student, StudentBoard]:
+    api.add_resource(resource, resource.path)

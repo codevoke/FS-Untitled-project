@@ -12,3 +12,7 @@ class StudyType(db.Model):
             "ST_ID": self.ST_ID,
             "ST_TYPE": self.ST_TYPE
         }
+
+    @classmethod
+    def get_all(cls):
+        return cls.query.all()

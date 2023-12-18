@@ -20,3 +20,7 @@ class StaffList(db.Model):
             "SL_DIVISION_ID": self.SL_DIVISION_ID,
             "SL_IS_WORKS": self.SL_IS_WORKS
         }
+
+    @classmethod
+    def get_all(cls):
+        return cls.query.all()

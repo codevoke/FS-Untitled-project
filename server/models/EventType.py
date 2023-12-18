@@ -22,3 +22,7 @@ class EventType(db.Model):
             "ET_LOCATION": self.ET_LOCATION,
             "ET_CALENDAR_ID": self.ET_CALENDAR_ID
         }
+    
+    @classmethod
+    def get_all(cls):
+        return cls.query.all()

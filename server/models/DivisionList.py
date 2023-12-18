@@ -14,3 +14,7 @@ class DivisionList(db.Model):
             "DL_NAME": self.DL_NAME,
             "DL_PARENT_DIVISION_ID": self.DL_PARENT_DIVISION_ID
         }
+
+    @classmethod
+    def get_all(cls):
+        return cls.query.all()

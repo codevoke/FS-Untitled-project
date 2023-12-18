@@ -20,3 +20,7 @@ class Student(db.Model):
             "S_GROUP_ID": self.S_GROUP_ID,
             "S_STUDY_ID": self.S_STUDY_ID
         }
+    
+    @classmethod
+    def get_all(cls):
+        return cls.query.all()

@@ -16,3 +16,7 @@ class StudentBoard(db.Model):
             "SB_STUDENT_ID": self.SB_STUDENT_ID,
             "SB_POSITION_ID": self.SB_POSITION_ID
         }
+
+    @classmethod
+    def get_all(cls):
+        return cls.query.all()
