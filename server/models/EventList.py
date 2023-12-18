@@ -6,8 +6,8 @@ class EventList(db.Model):
 
     EL_ID = db.Column(db.Integer, primary_key=True)
     EL_NAME = db.Column(db.String(50), nullable=False)
-    EL_START_DATE = db.Column(db.Timestamp)
-    EL_END_DATE = db.Column(db.Timestamp)
+    EL_START_DATE = db.Column(db.Date)
+    EL_END_DATE = db.Column(db.Date)
     EL_GROUP_ID = db.Column(db.Integer, db.ForeignKey('GROUP_LIST.GL_ID'), nullable=False)
     EL_STUDENT_ID = db.Column(db.Integer, db.ForeignKey('STUDENT.S_ID'), nullable=False)
     EL_STAFF_ID = db.Column(db.Integer, db.ForeignKey('STAFF_LIST.SL_ID'), nullable=False)

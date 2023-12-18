@@ -5,8 +5,8 @@ class Calendar(db.Model):
     __tablename__ = "CALENDAR"
 
     C_ID = db.Column(db.Integer, primary_key=True)
-    C_START_DATE = db.Column(db.Timestamp, nullable=False)
-    C_END_DATE = db.Column(db.Timestamp, nullable=False)
+    C_START_DATE = db.Column(db.Date, nullable=False)
+    C_END_DATE = db.Column(db.Date, nullable=False)
 
     def json(self):
         return {

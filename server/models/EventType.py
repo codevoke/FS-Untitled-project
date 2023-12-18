@@ -8,7 +8,7 @@ class EventType(db.Model):
     ET_TYPE = db.Column(db.String(50), nullable=False)
     ET_CLASS = db.Column(db.Integer, nullable=False)
     ET_NAME = db.Column(db.String(50), nullable=False)
-    ET_EVENT_DATE = db.Column(db.Timestamp)
+    ET_EVENT_DATE = db.Column(db.Date)
     ET_LOCATION = db.Column(db.String(50))
     ET_CALENDAR_ID = db.Column(db.Integer, db.ForeignKey('CALENDAR.C_ID'), nullable=False)
 

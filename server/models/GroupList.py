@@ -7,7 +7,7 @@ class GroupList(db.Model):
     GL_ID = db.Column(db.Integer, primary_key=True)
     GL_NAME = db.Column(db.Integer, nullable=False)
     GL_NUMBER = db.Column(db.Integer, nullable=False)
-    GL_YEAR = db.Column(db.Timestamp, nullable=False)
+    GL_YEAR = db.Column(db.Date, nullable=False)
 
     def json(self):
         return {
