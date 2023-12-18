@@ -5,5 +5,5 @@ export default function RedirectPage({ url }) {
     const navigate = useNavigate();
     useEffect(() => {
         navigate(url);
-    }, []);
+    }, [navigate, url]);
 }
