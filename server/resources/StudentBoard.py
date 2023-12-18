@@ -9,6 +9,6 @@ class StudentBoard(Resource):
         students = StudentBoardTable.get_all()
 
         if students:
-            return [s.json() for s in students]
+            return {"board": [s.json() for s in students]}, 200
         else:
             return {"message": "No students boards found"}, 404

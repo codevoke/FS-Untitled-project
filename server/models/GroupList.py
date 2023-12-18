@@ -14,7 +14,7 @@ class GroupList(db.Model):
             "GL_ID": self.GL_ID,
             "GL_NAME": self.GL_NAME,
             "GL_NUMBER": self.GL_NUMBER,
-            "GL_YEAR": self.GL_YEAR
+            "GL_YEAR": self.GL_YEAR.__str__()
         }
     
     @classmethod

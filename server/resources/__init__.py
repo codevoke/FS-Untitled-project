@@ -11,4 +11,5 @@ from .StudentBoard import StudentBoard
 api = Api(prefix="/api")
 
 for resource in [EventList, EventType, Groupes, Report, StaffList, Student, StudentBoard]:
+    print(resource.path)
     api.add_resource(resource, resource.path)

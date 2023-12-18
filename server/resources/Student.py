@@ -10,6 +10,6 @@ class Student(Resource):
         students = StudentTable.get_all()
 
         if students:
-            return [s.json() for s in students]
+            return {"students": [s.json() for s in students]}
         else:
             return {"message": "No students found"}, 404

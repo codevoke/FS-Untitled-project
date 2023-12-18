@@ -26,3 +26,13 @@ class EventList(db.Model):
     @classmethod
     def get_all(cls):
         return cls.query.all()
+
+    @classmethod
+    def get_by_range(cls, date_from, date_to):
+        if not date_from or not date_to:
+            return cls.get_all()
+        else:
+            return cls.query.filter(
+                cls.EL_START_DATE.between(date_from, date_to) &
+                cls.EL_END_DATE.between(date_from, date_to)
+            ).all()

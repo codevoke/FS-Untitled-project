@@ -10,6 +10,6 @@ class EventType(Resource):
         events = EventTypeTable.get_all()
 
         if events:
-            return [e.json() for e in events]
+            return {"event_types": [e.json() for e in events]}
         else:
             return {"message": "No events found"}, 404

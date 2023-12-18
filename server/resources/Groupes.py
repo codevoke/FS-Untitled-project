@@ -10,6 +10,6 @@ class Groupes(Resource):
         groupes = GroupListTable.get_all()
 
         if groupes:
-            return [g.json() for g in groupes]
+            return {"groupes": [g.json() for g in groupes]}, 200
         else:
             return {"message": "No groupes found"}, 404
